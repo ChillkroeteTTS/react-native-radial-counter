@@ -61,3 +61,4 @@ Interactive version of the progress ring. This is a controlled component.
 * timesRounded: Times the ring was filled
 * onTimesRoundedChange: Called when the 100% mark is reached. Passed parameter is an integer.
 * onRingProgressChange: Called when the ring progress changes. Passed parameter reaches from 0.0-1.0.
+* buttonOptions: TODO! 
