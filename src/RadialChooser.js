@@ -22,7 +22,6 @@ import Svg, {
     Stop
 } from 'react-native-svg';
 import React, {Component} from 'react';
-import {identity} from "../basicfunctions"
 
 const BUTTON_RADIUS = 50;
 const RADIAL_CHOOSER_DIA = 120;
@@ -153,7 +152,6 @@ export default class RadialChooser extends Component<Props> {
     render() {
         return (
             <View style={rcbStyles.container}
-                  onPress={identity}
                   onStartShouldSetResponder={(evt) => true}
                   onMoveShouldSetResponder={(evt) => true}
                   onResponderGrant={this.initTouchAfterLongPress}
