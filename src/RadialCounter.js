@@ -1,38 +1,14 @@
 import {
     StyleSheet,
-    Text,
     View,
-    TouchableHighlight
 } from 'react-native';
 import Svg, {
     Circle,
-    Ellipse,
-    G,
-    LinearGradient,
-    RadialGradient,
-    Line,
-    Path,
-    Polygon,
-    Polyline,
-    Rect,
-    Symbol,
-    SvgText,
-    Use,
-    Defs,
-    Stop
 } from 'react-native-svg';
 import React, {Component} from 'react';
 
-const BUTTON_RADIUS = 50;
-const RADIAL_CHOOSER_DIA = 120;
-
 const rcbStyles = StyleSheet.create({
-    th: {
-        borderRadius: BUTTON_RADIUS
-    },
     container: {
-        width: RADIAL_CHOOSER_DIA,
-        height: RADIAL_CHOOSER_DIA,
         alignItems: "center",
         justifyContent: "center",
     },
@@ -52,6 +28,7 @@ function layerSwitch(lastDeg, deg) {
     else return 0;
 }
 
+//https://codepen.io/xgad/post/svg-radial-progress-meters
 function LoadingRing({backgroundColor, tintColor, innerRadius, outerRadius, progress}) {
     const borderWidth = outerRadius - innerRadius;
     const circleRadius = innerRadius + borderWidth / 2;
@@ -74,10 +51,7 @@ function LoadingRing({backgroundColor, tintColor, innerRadius, outerRadius, prog
     </Svg>);
 }
 
-type Props = {};
-
-//https://codepen.io/xgad/post/svg-radial-progress-meters
-export default class RadialChooser extends Component<Props> {
+export default class RadialCounter extends Component {
 
     constructor(props) {
         super(props);
@@ -151,7 +125,7 @@ export default class RadialChooser extends Component<Props> {
 
     render() {
         return (
-            <View style={rcbStyles.container}
+            <View style={[rcbStyles.container, this.props.containerStyle]}
                   onStartShouldSetResponder={(evt) => true}
                   onMoveShouldSetResponder={(evt) => true}
                   onResponderGrant={this.initTouchAfterLongPress}

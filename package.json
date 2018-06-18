@@ -1,8 +1,8 @@
 {
-  "name": "react-native-radial-chooser",
-  "version": "0.0.1",
+  "name": "react-native-radial-counter",
+  "version": "0.0.2",
   "description": "Put a description here",
-  "main": "src/RadialChooser.js",
+  "main": "src/RadialCounter.js",
   "peerDependencies": {
     "react": "^16.4.1",
     "react-native": "^0.55.4"
