@@ -1,6 +1,6 @@
 {
   "name": "react-native-radial-counter",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Interactive react native component to count how many times a progress ring was filled. See https://github.com/ChillkroeteTTS/react-native-radial-counter for details.",
   "main": "built/RadialCounter.js",
   "peerDependencies": {
