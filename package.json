@@ -1,6 +1,6 @@
 {
   "name": "react-native-radial-counter",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Put a description here",
   "main": "src/RadialCounter.js",
   "peerDependencies": {
@@ -8,10 +8,7 @@
     "react-native": "^0.55.4"
   },
   "dependencies": {
-    "@types/react": "^16.4.0",
-    "@types/react-native": "^0.55.22",
     "react-native-svg": "^6.3.1",
-    "typescript": "^2.9.2"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -22,5 +19,9 @@
     "name": "Tjark Smalla",
     "email": "tjarksmalla@chillkroetenteich.de"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "@types/react": "^16.4.0",
+    "@types/react-native": "^0.55.22",
+    "typescript": "^2.9.2"
+  }
 }
