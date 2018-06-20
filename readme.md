@@ -20,18 +20,24 @@ yarn add react-native-radial-counter
 <RadialCounter
     containerStyle={styles.svgContainer}
     longPressDelay={300}
-    backgroundColor={"#e6e6e6"} tintColor={"#6df732"}
-    innerRadius={50} outerRadius={60}
+    backgroundColor={"#e6e6e6"} tintColor={this.props.tint}
+    innerRadius={this.diameter / 2 - 10} outerRadius={this.diameter / 2}
     progress={this.state.ringProgress}
     timesRounded={this.state.timesRounded}
     onTimesRoundedChange={(timesRounded) =>
         this.setState(o => {
-            return {timesRounded: Math.max(timesRounded, 0)}
+            return { timesRounded: Math.max(timesRounded, 0) }
         })}
     onRingProgressChange={(ringProgress) =>
         this.setState(o => {
-            return {ringProgress}
-        })}/>
+            return { ringProgress }
+        })}
+    buttonOptions={{
+        useButton: true,
+        buttonColor: this.props.tint,
+        buttonActiveColor: this.props.tintDisabled,
+        gap: 15
+    }} />
 ```
 
 
